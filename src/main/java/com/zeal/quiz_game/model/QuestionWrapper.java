@@ -6,14 +6,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-
-@Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class Question {
+public class QuestionWrapper {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +19,4 @@ public class Question {
     private String option2;
     private String option3;
     private String option4;
-    private String correctAnswer;
-    private String difficultyLevel;
-    private String category;
-
-
 }
